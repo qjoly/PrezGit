@@ -50,13 +50,13 @@ section.sommaire li {
   (function() {
     var u="//mat.une-tasse-de.cafe/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '2']);
+    _paq.push(['setSiteId', '3']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="//mat.une-tasse-de.cafe/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
 
 
 CyberPrez #04 - Git
