@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  cyberprez03:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    image: qjoly/git
+    container_name: cyberprez04
+    ports:
+      - 8080:80
