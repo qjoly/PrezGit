@@ -21,8 +21,6 @@ jobs:
         run: |
             mkdir build
             cp -R img build/
-            cp -R exercices build/
-            cp -R videos build/
 
       - name: Marp Build (Html)
         uses: docker://marpteam/marp-cli:v1.7.0
