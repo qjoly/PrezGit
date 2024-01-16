@@ -345,12 +345,13 @@ git commit -m "Ma modification ici";
 ## Ajouter des modifications au dernier commit
 
 ```bash
-cd $(mktemp -d)
-git init
-for i in `seq -w 1 3`; do echo "$i" | tee -a FICHIER; git add FICHIER; git commit -m "$i"; done;
-###
-git add . 
+for i in `seq -w 1 3`; do echo "$i" | tee -a FICHIER; done;
+git add . ; git commit -m "Création des fichiers 1, 2 et 3"
+# Je souhaite ajouter "4" au fichier.. mais le commit est déjà fait
+echo "4" | tee -a FICHIER
+git add .
 git commit --amend
+git log
 ```
 
 ---
@@ -359,7 +360,7 @@ git commit --amend
 
 --- 
 
-## Sauvegarder des modifications non-commitées (stash)
+## Sauvegarder des modifications non commitées (stash)
 
 ```bash
 git stash
