@@ -295,4 +295,50 @@ En modifiant le fichier, on supprime les marqueurs de conflit (`<<<<<<<, =======
 ---
 
 ![center](img/conflict.gif)
+
 ---
+
+## Annuler un commit
+
+Il existe plusieurs méthodes pour annuler un commit :
+- Ajouter un commit en annulant un autre (`revert`)
+- Forcer la suppression d'un commit avec perte de l'historique (`rebase`)
+- Forcer le retour arrière jusqu'à un certain commit (`reset`)
+
+:warning: Attention, je souhaite modifier un fichier ayant eu plusieurs commits : il y aura des conflits.
+
+---
+
+### Annuler un commit via un revert
+
+```bash
+cd $(mktemp -d) && git init
+for i in `seq -w 1 3`; do echo "$i" > "$i" ; git add "$i"; git commit -m "$i"; done;
+# Je souhaite supprimer le commit créant le fichier "2"
+```
+
+---
+
+## Modifier la branche du dernier commit
+
+```bash
+# Annuler le précédent commit, mais garder les modifications
+git reset HEAD~ --soft
+git stash
+# modification sauvegardée dans stash, se placer sur la bonne branche
+git checkout name-of-the-correct-branch
+git stash pop
+git add .
+git commit -m "Ma modification ici";
+```
+
+--- 
+
+```bash
+cd $(mktemp -d)
+git init
+for i in `seq -w 1 3`; do echo "$i" | tee -a FICHIER; git add FICHIER; git commit -m "$i"; done;
+```
+
+git add . 
+git commit --amend --no-edit
