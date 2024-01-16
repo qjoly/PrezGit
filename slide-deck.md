@@ -116,7 +116,7 @@ Git va alors créer un répertoire caché nommé .git qui contiendra toutes les 
 git add <nom du fichier>
 ```
 
-Les fichiers ajoutés sont alors placés dans la zone de transit (staging area).
+Les fichiers ajoutés sont alors placés dans la zone de transit *(staging area)*.
 
 --- 
 
@@ -137,7 +137,7 @@ Un commit est une validation des modifications effectuées sur les fichiers du p
 - L'auteur du commit
 - La date du commit
 - Le message du commit
-- Les fichiers modifiés
+- Les fichiers modifiés.
 
 Lorsque l'on clone un dépôt Git, on récupère l'ensemble des commits du projet.
 
@@ -262,7 +262,7 @@ Un mainteneur du projet pourra alors valider, ou réclamer des modifications, av
 
 ---
 
-Pour créer une MR/PR, il faut procéder aux étapes suivantes:
+Pour créer une MR/PR, il faut procéder aux étapes suivantes :
 - Créer une branche
 - Ajouter les modifications
 - Envoyer la branche sur le serveur distant
@@ -278,7 +278,7 @@ Quelques règles:
 - Ajoutez des labels*.
 - Soyez courtois et patient.
 
-<i style="font-size: 70%;">Les labels sont des "étiquettes" qui permettent de catégoriser les MR/PR et de les retrouver plus facilement (ex: bug, enhancement, etc.).</i>
+<i style="font-size: 70%;">Les labels sont des "étiquettes" qui permettent de catégoriser les MR/PR et de les retrouver plus facilement *(ex: bug, enhancement, etc.)*.</i>
 
 ![bg right:60%](./img/créer-pr-3.png)
 
