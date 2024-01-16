@@ -342,6 +342,8 @@ git commit -m "Ma modification ici";
 
 --- 
 
+## Ajouter des modifications au dernier commit
+
 ```bash
 cd $(mktemp -d)
 git init
@@ -349,4 +351,14 @@ for i in `seq -w 1 3`; do echo "$i" | tee -a FICHIER; git add FICHIER; git commi
 ###
 git add . 
 git commit --amend --no-edit
+```
+
+--- 
+
+## Sauvegarder des modifications non-commitées (stash)
+
+```bash
+git stash
+git stash pop # Applique les fichiers, et supprime la pile
+git stash apply # Applique les fichiers en gardant la pile
 ```
