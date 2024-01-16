@@ -323,7 +323,7 @@ ls
 
 ---
 
-![center](./img/revert.gif)
+![center height:600px](./img/revert.gif)
 
 ---
 
