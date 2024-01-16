@@ -315,7 +315,15 @@ Il existe plusieurs méthodes pour annuler un commit :
 cd $(mktemp -d) && git init
 for i in `seq -w 1 3`; do echo "$i" > "$i" ; git add "$i"; git commit -m "$i"; done;
 # Je souhaite supprimer le commit créant le fichier "2"
+git revert HEAD^ # HEAD^ = avant-dernier commit
+ls
+1 3
+# le fichier "2" est bien supprimé
 ```
+
+---
+
+![center](./img/revert.gif)
 
 ---
 
@@ -338,7 +346,7 @@ git commit -m "Ma modification ici";
 cd $(mktemp -d)
 git init
 for i in `seq -w 1 3`; do echo "$i" | tee -a FICHIER; git add FICHIER; git commit -m "$i"; done;
-```
-
+###
 git add . 
 git commit --amend --no-edit
+```
