@@ -334,7 +334,7 @@ ls
 git reset HEAD~ --soft
 git stash
 # modification sauvegardée dans stash, se placer sur la bonne branche
-git checkout name-of-the-correct-branch
+git checkout bonneBranche
 git stash pop
 git add .
 git commit -m "Ma modification ici";
@@ -350,8 +350,12 @@ git init
 for i in `seq -w 1 3`; do echo "$i" | tee -a FICHIER; git add FICHIER; git commit -m "$i"; done;
 ###
 git add . 
-git commit --amend --no-edit
+git commit --amend
 ```
+
+---
+
+![center height:600](./img/amend.gif)
 
 --- 
 
