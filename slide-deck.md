@@ -397,3 +397,24 @@ git rebase -i HEAD~3
 Vous aurez la liste des 6 commits, laissez le premier à *pick* et modifier les autres en *squash*. Cela aura pour effet de supprimer 5 commits pour n'en garder qu'un.
 
 *Vous pouvez aussi modifier le message du commit*.
+
+---
+
+## les tags
+
+Les tags sont des références vers un commit. Ils permettent de marquer un commit comme étant une version stable du projet. On l'utilise habituellement pour marquer les versions du projet *(ex: v1.0.0)* avant une release.
+
+Pour créer un tag local, il faut utiliser la commande suivante :
+
+```bash
+git tag <nom du tag> [hash du commit]
+# exemple: git tag v1.0.0
+```
+
+Pour créer un tag sur le serveur distant, il faut utiliser la commande suivante :
+
+```bash
+git tag -a <nom du tag> -m "Message du tag"
+# exemple: git tag -a v1.0.0 -m "Version 1.0.0"
+git push origin <nom du tag>
+```
