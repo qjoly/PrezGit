@@ -5,7 +5,7 @@ markdown.marp.enableHtml: true
 paginate: true
 class: invert
 header: 'Découvrir Git'
-footer: "[Auteur](https://une-tasse-de.cafe)"
+footer: "[Blog](https://une-tasse-de.cafe)"
 titre: 'CyberPrez #04 - Git'
 description: Git avec une tasse de café
 author: Quentin JOLY
@@ -59,8 +59,9 @@ section.sommaire li {
 
 
 
-CyberPrez #04 - Git
-# Découvrir Git 
+# Découvrir Git
+
+Avec une tasse de café
 
 ![width:250](./img/gitlogo.png)
 
@@ -71,6 +72,8 @@ CyberPrez #04 - Git
 
 ---
 <!-- _class: lead invert -->
+<!-- _header: 'Qu'est-ce que Git ?' -->
+
 
 - Git est un logiciel de gestion de versions décentralisé. C'est un logiciel libre créé par Linus Torvalds, auteur du noyau Linux, et distribué selon les termes de la licence publique générale GNU version 2.
 
@@ -78,6 +81,7 @@ CyberPrez #04 - Git
 
 ---
 <!-- _class: lead invert -->
+<!-- _header: 'Git, pour qui ?' -->
 
 # Pourquoi utiliser Git ?
 
@@ -120,7 +124,7 @@ Les fichiers ajoutés sont alors placés dans la zone de transit *(staging area)
 
 --- 
 
-# Qu'est ce que la zone de transit ?
+# Qu'est-ce que la zone de transit ?
 
 - La zone de transit est un espace de stockage temporaire qui permet de préparer les fichiers à être commités.
 - Elle permet de sélectionner les fichiers à ajouter au prochain commit.
@@ -143,6 +147,7 @@ Lorsque l'on clone un dépôt Git, on récupère l'ensemble des commits du proje
 
 ---
 <!-- _class: lead invert -->
+<!-- _header: 'Les commits' -->
 
 Pour commiter les fichiers, il faut utiliser la commande suivante *(après avoir ajouté les fichiers à la zone de transit)* :
 
@@ -154,6 +159,7 @@ Une fois les fichiers commités, ils sont stockés dans le répertoire `.git`. I
 
 ---
 <!-- _class: lead invert -->
+<!-- _header: 'Les commits' -->
 
 Pour afficher l'historique des commits, il faut utiliser la commande suivante :
 
@@ -171,10 +177,12 @@ Date:   Thu Jan 11 07:25:58 2024 +0100
 
 ---
 <!-- _class: lead invert -->
+<!-- _header: 'Les commits' -->
 
 # Envoyer les commits sur un serveur distant
 
 ---
+<!-- _header: 'Les commits' -->
 
 Il existe de nombreux services qui permettent d'héberger des dépôts Git :
 - GitHub (le plus connu)
@@ -191,11 +199,12 @@ git push -u origin main # Envoie les commits sur le serveur distant
 ```
 
 ---
+<!-- _header: 'Collaborer' -->
 
 ## Qu'en est-il du cas où nous travaillons à plusieurs sur un même projet ?
 
-- Il est nécessaire de récupérer les commits (modifications) des autres collaborateurs avant de pouvoir envoyer les siens.  
-- Besoin de pouvoir gérer les conflits lorsque 2 collaborateurs ont modifié le même fichier.
+- Il est nécessaire de récupérer les commits *(modifications)* des autres collaborateurs avant de pouvoir envoyer les siens.  
+- Besoin de pouvoir gérer les conflits lorsque deux collaborateurs ont modifié le même fichier.
 
 Pour récupérer les commits des autres collaborateurs, il faut utiliser la commande suivante :
 
@@ -207,11 +216,11 @@ git pull
 
 ## Les branches
 
-Une branche est une version parallèle du projet. Elle permet de travailler sur une fonctionnalité sans impacter le reste du projet. 
+Une branche est une version parallèle du projet. Elle permet de travailler sur une fonctionnalité sans impacter le reste du projet avant de la fusionner avec la branche principale ou de maintenir une version alternative.
 
 ![height:250 center](img/branche.drawio.svg)
 
-Une fois la fonctionnalité terminée, il suffit de fusionner la branche avec la branche principale.
+Une fois le code terminé, il suffit de fusionner la branche avec la branche principale pour l'intégrer au code 'stable'.
 
 ---
 
@@ -263,16 +272,16 @@ Un mainteneur du projet pourra alors valider, ou réclamer des modifications, av
 ---
 
 Pour créer une MR/PR, il faut procéder aux étapes suivantes :
-- Créer une branche
+- Créer une branche *(ou un fork si vous n'avez pas un accès en écriture au dépôt)*
 - Ajouter les modifications
 - Envoyer la branche sur le serveur distant
-- Créer une MR/PR
+- Créer une MR/PR via l'interface web *(github/gitlab)*
 
 ![height:350 center](img/creer-pr.png)
 
 ---
 
-Quelques règles:
+Quelques règles à retenir :
 - Détaillez les modifications apportées.
 - Ajoutez des images/log si nécessaire.
 - Ajoutez des labels*.
@@ -305,7 +314,7 @@ Il existe plusieurs méthodes pour annuler un commit :
 - Forcer la suppression d'un commit avec perte de l'historique (`rebase`)
 - Forcer le retour arrière jusqu'à un certain commit (`reset`)
 
-:warning: Attention, je souhaite modifier un fichier ayant eu plusieurs commits : il y aura des conflits.
+:warning: Attention, si je souhaite modifier un fichier ayant eu plusieurs commits : il y aura des conflits.
 
 ---
 
@@ -322,6 +331,7 @@ ls
 ```
 
 ---
+<!-- _header: 'Annuler un commit via un revert' -->
 
 ![center height:600px](./img/revert.gif)
 
@@ -355,12 +365,17 @@ git log
 ```
 
 ---
+<!-- _header: 'Ajouter une modification au dernier commit' -->
 
 ![center height:600](./img/amend.gif)
 
 --- 
 
 ## Sauvegarder des modifications non commitées (stash)
+
+Admettons que vous soyez en train de bosser sur une fonctionnalité avant d'être interrompu pour corriger un bug sur une autre branche.
+
+Plutôt que de commit des modifications incomplètes, vous pouvez utiliser un `stash` qui va sauvegarder vos modifications non commitées.
 
 ```bash
 git stash
