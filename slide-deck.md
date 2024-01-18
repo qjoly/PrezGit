@@ -382,3 +382,18 @@ git stash
 git stash pop # Applique les fichiers, et supprime la pile
 git stash apply # Applique les fichiers en gardant la pile
 ```
+
+---
+
+## Squasher des commits
+
+Pour augmenter la lisibilité dans l'historique de commit `git log`, il peut être intéressant de __fusionner__ des commits. On appelle ça un **squash**.
+
+Pour fusionner les 3 derniers commits:
+```bash
+git rebase -i HEAD~3
+```
+
+Vous aurez la liste des 6 commits, laissez le premier à *pick* et modifier les autres en *squash*. Cela aura pour effet de supprimer 5 commits pour n'en garder qu'un.
+
+*Vous pouvez aussi modifier le message du commit*.
