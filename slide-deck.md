@@ -337,6 +337,31 @@ ls
 
 ---
 
+### Annuler un commit via un rebase
+
+Pour annuler un commit via un rebase, il faut utiliser les commandes suivantes :
+
+```bash
+cd $(mktemp -d) && git init
+for i in `seq -w 1 3`; do echo "$i" > "$i" ; git add "$i"; git commit -m "$i"; done;
+# Je souhaite supprimer le commit créant le fichier "2"
+git rebase -i HEAD~3
+# Changer "pick" en "drop" pour le commit à supprimer
+git log
+# Le commit est bien supprimé
+```
+
+`rebase` peut aussi être utilisé pour fusionner des commits, ou modifier l'ordre des modifications.
+
+*:warning: Attention, l'usage de `rebase` peut être dangereux. Des pertes de données peuvent survenir avec une mauvaise manipulation.*
+
+---
+<!-- _header: 'Annuler un commit via un rebase' -->
+
+![center height:600px](./img/rebase.gif)
+
+---
+
 ## Modifier la branche du dernier commit
 
 ```bash
