@@ -68,6 +68,46 @@ Avec une tasse de café
 ---
 <!-- _class: lead invert sommaire -->
 
+# Sommaire
+*(1/2)*
+- Qu'est-ce que Git?
+    - [Qu'est-ce que Git ?](#5)
+    - [Pourquoi utiliser Git ?](#6)
+- La base de Git
+  - [Installer Git](#7)
+  - [Créer un dépôt Git](#8)
+  - [Ajouter des fichiers en *staging*](#9)
+  - [Qu'est-ce que la zone de transit ?](#10)
+  - [Commiter les fichiers](#11)
+  - [Envoyer les commits sur un serveur distant](#14)
+- Maintenir un projet en équipe
+  - [Les branches](#17)
+  - [Changer de branche](#18)
+  - [Fusionner des branches](#39)
+---
+<!-- _class: lead invert sommaire -->
+
+# Sommaire
+*(2/2)*
+
+- Collaborer sur un projet
+  - [Proposer des modifications](#20)
+  - [Gérer les conflits](#23)
+  - [Annuler un commit](#25)
+    - [Via un revert](#26)
+    - [Via un rebase](#28)
+  - [Modifier la branche du dernier commit](#30)
+  - [Ajouter des modifications au dernier commit](#31)
+  - [Sauvegarder des modifications non commitées (stash)](#33)
+  - [Squasher des commits](#34)
+  - [les tags](#35)
+  - [Release](#54)
+  
+
+---
+
+<!-- _class: lead invert sommaire -->
+
 # Qu'est-ce que Git ?
 
 ---
@@ -442,3 +482,32 @@ git tag -a <nom du tag> -m "Message du tag"
 # exemple: git tag -a v1.0.0 -m "Version 1.0.0"
 git push origin <nom du tag>
 ```
+
+---
+
+Les tags permettent de concerver d'anciennes versions du projet et de comparer les modifications entre deux versions.
+
+Lorsqu'on souhaite comparer deux versions, il faut utiliser la commande suivante :
+
+```bash
+git diff <tag1> <tag2>
+# exemple: git diff v1.0.0 v1.1.0
+```
+
+Lorsqu'une version doit être livrée au client, on parle de release.
+
+---
+
+## Release
+
+Une release est une version du projet qui est livrée au client. Elle est généralement marquée par un tag et contient les sources du projet et/ou les livrables *(ex: .deb, .rpm, .exe, etc.)*.
+
+Pour créer une release, il faut procéder aux étapes suivantes :
+- Créer un tag
+- Créer une release sur le serveur distant
+
+
+
+![bg right:50%](./img/creer-release.png)
+
+---
