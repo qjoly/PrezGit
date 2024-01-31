@@ -512,3 +512,11 @@ Pour créer une release, il faut procéder aux étapes suivantes :
 ![bg right:50%](./img/creer-release.png)
 
 ---
+
+# Résolution de problèmes
+
+--- 
+
+# Git ne veut pas push mes commits
+
+
