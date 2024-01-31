@@ -7,6 +7,7 @@
 
 # CyberPrez - git
 
+p'tite modif 
 Site sous forme de diaporama permettant aux débutants de commencer à utiliser git. Cette présentation est destinée aux AdminSys cherchant un "Getting-Started" français et résumant les principes importants. 
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
