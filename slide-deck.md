@@ -543,3 +543,21 @@ Abandon
 ```
 
 La raison est que j'ai des modifications non commitées sur la branche actuelle. Je dois soit les commit, soit les supprimer, soit les garder en mémoire avec un `git stash`.
+
+---
+
+# Ma tête (HEAD) est détachée !
+
+```bash
+git status          
+HEAD détachée sur e1dba84
+rien à valider, la copie de travail est propre
+➜  PrezGit git:(20) git pull  
+Vous n'êtes actuellement sur aucune branche.
+Veuillez spécifier sur quelle branche vous souhaiter rebaser.
+Référez-vous à git-pull(1) pour de plus amples détails.
+
+    git pull <distant> <branche>
+```
+
+Je suis dans un état spécial appelé "HEAD détachée". Cela signifie que je ne suis pas sur une branche. Je dois me placer sur une branche pour pouvoir travailler : `git checkout main`
