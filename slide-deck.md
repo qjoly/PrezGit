@@ -519,4 +519,15 @@ Pour créer une release, il faut procéder aux étapes suivantes :
 
 # Git ne veut pas push mes commits
 
+```bash
+To github.com:QJoly/PrezGit.git
+ ! [rejected]        test/sandbox -> test/sandbox (fetch first)
+erreur : impossible de pousser des références vers 'github.com:QJoly/PrezGit.git'
+astuce: Les mises à jour ont été rejetées car le distant contient du travail que vous
+astuce: n'avez pas localement. La cause probable est que quelqu'un a déjà poussé sur la même réf.
+astuce: depuis un autre dépôt. Si vous souhaitez intégrer les changements distants,
+astuce: "utilisez 'git pull' avant de pousser à nouveau.
+astuce: Voir la 'Note à propos des avances rapides' dans 'git push --help' pour plus d'information.
+```
 
+La raison est qu'il existe un commit sur le serveur distant que je n'ai pas récupérer en local. Je dois faire un `git pull` avant de pouvoir push mes commits.
