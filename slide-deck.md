@@ -158,7 +158,7 @@ Avec une tasse de café
 git init
 ```
 
-Git va alors créer un répertoire caché nommé .git qui contiendra toutes les informations nécessaires au fonctionnement de Git.
+Git va alors créer un répertoire caché nommé `.git` qui contiendra toutes les informations nécessaires au fonctionnement de Git.
 
 ---
 
@@ -524,9 +524,23 @@ Pour créer une release, il faut procéder aux étapes suivantes :
 - Créer un tag
 - Créer une release sur le serveur distant
 
-
-
 ![bg right:50%](./img/creer-release.png)
+
+---
+<!-- _class: lead invert -->
+
+## Exemple de Workflow
+
+- `main` : branche liée à la production (stable)
+- `develop` : développement actif (unstable)
+- `(feat|chore|fix)/.*` : modification de code
+
+Les développeurs travaillent dans des sous-branches créées à partir de la branche `develop`. Les versions mineures sont gérés dans la branche `develop` et lorsqu'on livre en production : on fusionne la branche `develop` vers `main`.
+
+---
+<!-- _class: lead invert -->
+
+![center height:350](img/Exemple-de-workflow.png)
 
 ---
 <!-- _class: lead invert -->
