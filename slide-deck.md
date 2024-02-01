@@ -71,19 +71,19 @@ Avec une tasse de café
 # Sommaire
 *(1/3)*
 - Qu'est-ce que Git?
-    - [Qu'est-ce que Git ?](#5)
-    - [Pourquoi utiliser Git ?](#6)
+    - [Qu'est-ce que Git ?](#4)
+    - [Pourquoi utiliser Git ?](#5)
 - La base de Git
-  - [Installer Git](#7)
-  - [Créer un dépôt Git](#8)
-  - [Ajouter des fichiers en *staging*](#9)
-  - [Qu'est-ce que la zone de transit ?](#10)
-  - [Commiter les fichiers](#11)
-  - [Envoyer les commits sur un serveur distant](#14)
+  - [Installer Git](#6)
+  - [Créer un dépôt Git](#7)
+  - [Ajouter des fichiers en *staging*](#8)
+  - [Qu'est-ce que la zone de transit ?](#9)
+  - [Commiter les fichiers](#10)
+  - [Envoyer les commits sur un serveur distant](#13)
 - Maintenir un projet en équipe
-  - [Les branches](#17)
-  - [Changer de branche](#18)
-  - [Fusionner des branches](#39)
+  - [Les branches](#16)
+  - [Changer de branche](#17)
+  - [Fusionner des branches](#20)
 ---
 <!-- _class: lead invert sommaire -->
 
@@ -91,17 +91,17 @@ Avec une tasse de café
 *(2/3)*
 
 - Collaborer sur un projet
-  - [Proposer des modifications](#20)
-  - [Gérer les conflits](#23)
-  - [Annuler un commit](#25)
-    - [Via un revert](#26)
-    - [Via un rebase](#28)
-  - [Modifier la branche du dernier commit](#30)
-  - [Ajouter des modifications au dernier commit](#31)
-  - [Sauvegarder des modifications non commitées (stash)](#33)
-  - [Squasher des commits](#34)
-  - [les tags](#35)
-  - [Release](#37)
+  - [Proposer des modifications](#21)
+  - [Gérer les conflits](#24)
+  - [Annuler un commit](#26)
+    - [Via un revert](#27)
+    - [Via un rebase](#29)
+  - [Modifier la branche du dernier commit](#31)
+  - [Ajouter des modifications au dernier commit](#32)
+  - [Sauvegarder des modifications non commitées (stash)](#34)
+  - [Squasher des commits](#35)
+  - [les tags](#36)
+  - [Release](#38)
 
 ---
 
@@ -109,10 +109,10 @@ Avec une tasse de café
 *(2/3)*
 
 - Résolution de problèmes
-  - [Git ne veut pas push mes commits](#39)
-  - [Je ne peux pas changer de branche !](#40)
-  - [Ma tête (HEAD) est détachée !](#41)
-  - [Impossible de pull](#42)
+  - [Git ne veut pas push mes commits](#40)
+  - [Je ne peux pas changer de branche !](#41)
+  - [Ma tête (HEAD) est détachée !](#42)
+  - [Impossible de pull](#43)
   
 
 ---
