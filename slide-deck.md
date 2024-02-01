@@ -69,7 +69,7 @@ Avec une tasse de café
 <!-- _class: lead invert sommaire -->
 
 # Sommaire
-*(1/2)*
+*(1/3)*
 - Qu'est-ce que Git?
     - [Qu'est-ce que Git ?](#5)
     - [Pourquoi utiliser Git ?](#6)
@@ -88,7 +88,7 @@ Avec une tasse de café
 <!-- _class: lead invert sommaire -->
 
 # Sommaire
-*(2/2)*
+*(2/3)*
 
 - Collaborer sur un projet
   - [Proposer des modifications](#20)
@@ -101,8 +101,7 @@ Avec une tasse de café
   - [Sauvegarder des modifications non commitées (stash)](#33)
   - [Squasher des commits](#34)
   - [les tags](#35)
-  - [Release](#54)
-  
+  - [Release](#37)
 
 ---
 
@@ -511,6 +510,8 @@ Pour créer une release, il faut procéder aux étapes suivantes :
 ![bg right:50%](./img/creer-release.png)
 
 ---
+<!-- _class: lead invert -->
+
 # Résolution de problèmes
 
 --- 
@@ -570,11 +571,9 @@ Je suis dans un état spécial appelé "HEAD détachée". Cela signifie que je n
 astuce: Vous avez des branches divergentes et vous devez spécifier comment
 astuce: les réconcilier. Vous pouvez le faire en lançant une des
 astuce: commandes suivantes avant votre prochain tirage :
-astuce: 
 astuce:   git config pull.rebase false  # fusion
 astuce:   git config pull.rebase true   # rebasage
 astuce:   git config pull.ff only       # avance rapide seulement
-astuce: 
 # [..]
 fatal : Besoin de spécifier comment réconcilier des branches divergentes.
 ```
