@@ -561,3 +561,24 @@ Référez-vous à git-pull(1) pour de plus amples détails.
 ```
 
 Je suis dans un état spécial appelé "HEAD détachée". Cela signifie que je ne suis pas sur une branche. Je dois me placer sur une branche pour pouvoir travailler : `git checkout main`
+
+---
+
+# Impossible de pull 
+
+```bash
+astuce: Vous avez des branches divergentes et vous devez spécifier comment
+astuce: les réconcilier. Vous pouvez le faire en lançant une des
+astuce: commandes suivantes avant votre prochain tirage :
+astuce: 
+astuce:   git config pull.rebase false  # fusion
+astuce:   git config pull.rebase true   # rebasage
+astuce:   git config pull.ff only       # avance rapide seulement
+astuce: 
+# [..]
+fatal : Besoin de spécifier comment réconcilier des branches divergentes.
+```
+
+Ce message est dû au fonctionnement interne du `pull` *(en réalité : c'est un `fetch` puis `merge`)*. Je vous conseille de passer par l'option 2 `git config pull.rebase true` qui va fusionner les modifications distantes avec les votres.
+
+*`pull.ff` ne tolère pas les conflicts, et `pull.rebase false` créera des commits de fusion indésirables`*
