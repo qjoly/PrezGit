@@ -105,6 +105,17 @@ Avec une tasse de café
 
 ---
 
+# Sommaire
+*(2/3)*
+
+- Résolution de problèmes
+  - [Git ne veut pas push mes commits](#39)
+  - [Je ne peux pas changer de branche !](#40)
+  - [Ma tête (HEAD) est détachée !](#41)
+  - [Impossible de pull](#42)
+  
+
+---
 <!-- _class: lead invert sommaire -->
 
 # Qu'est-ce que Git ?
