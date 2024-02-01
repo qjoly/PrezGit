@@ -270,9 +270,11 @@ git pull
 
 Une branche est une version parallèle du projet. Elle permet de travailler sur une fonctionnalité sans impacter le reste du projet avant de la fusionner avec la branche principale ou de maintenir une version alternative.
 
-![height:250 center](img/branche.drawio.svg)
+![height:200 center](img/branche.drawio.svg)
 
 Une fois le code terminé, il suffit de fusionner la branche avec la branche principale pour l'intégrer au code 'stable'.
+
+*Il convient de nommer une branche avec le type de modification apportée (fix, feat, chore).*
 
 ---
 
