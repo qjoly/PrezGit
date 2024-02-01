@@ -209,6 +209,8 @@ Une fois les fichiers commités, ils sont stockés dans le répertoire `.git`. I
 
 <i style="font-size: 70%;">note: Il est possible de modifier le message du commit en utilisant l'option <code>--amend</code>. <a href="#32">Plus de détails sur la page 32</a> </i>
 
+Vous pouvez afficher les différents commits via la commande `git log`.
+
 ---
 <!-- _class: lead invert -->
 <!-- _header: 'Les commits' -->
