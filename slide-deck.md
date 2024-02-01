@@ -207,6 +207,8 @@ git commit -m "Message du commit"
 
 Une fois les fichiers commités, ils sont stockés dans le répertoire `.git`. Il est possible de revenir à n'importe quel commit du projet grâce à son hash.
 
+<i style="font-size: 70%;">note: Il est possible de modifier le message du commit en utilisant l'option <code>--amend</code>. <a href="#32">Plus de détails sur la page 32</a> </i>
+
 ---
 <!-- _class: lead invert -->
 <!-- _header: 'Les commits' -->
@@ -437,6 +439,8 @@ git add .
 git commit --amend
 git log
 ```
+
+Le `--amend` va alors vous ouvrir une fenêtre pour refaire le commit *(à partir des fichiers ajoutés via `git add`)*, c'est aussi l'occasion de **modifier le message du commit si vous le souhaitez**.
 
 ---
 <!-- _header: 'Ajouter une modification au dernier commit' -->
