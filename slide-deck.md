@@ -70,7 +70,7 @@ Avec une tasse de café
 
 # Sommaire
 *(1/3)*
-- Qu'est-ce que Git?
+- Qu'est-ce que Git ?
     - [Qu'est-ce que Git ?](#4)
     - [Pourquoi utiliser Git ?](#5)
 - La base de Git
@@ -104,9 +104,10 @@ Avec une tasse de café
   - [Release](#38)
 
 ---
+<!-- _class: lead invert sommaire -->
 
 # Sommaire
-*(2/3)*
+*(3/3)*
 
 - Résolution de problèmes
   - [Git ne veut pas push mes commits](#40)
@@ -135,8 +136,8 @@ Avec une tasse de café
 
 # Pourquoi utiliser Git ?
 
-- Développeurs: pour gérer les versions de votre code, travailler à plusieurs sur un même projet, gérer les conflits, etc.
-- Ops: pour gérer les versions de vos scripts, de vos configurations, automatiser vos déploiements, etc.
+- Développeurs : pour gérer les versions de votre code, travailler à plusieurs sur un même projet, gérer les conflits, etc.
+- Ops : pour gérer les versions de vos scripts, de vos configurations, automatiser vos déploiements, etc.
 
 ---
 <!-- _class: lead invert -->
@@ -170,7 +171,7 @@ Git va alors créer un répertoire caché nommé `.git` qui contiendra toutes le
 git add <nom du fichier>
 ```
 
-Les fichiers ajoutés sont alors placés dans la zone de transit *(staging area)*.
+Les fichiers ajoutés sont ainsi placés dans la zone de transit *(staging area)*.
 
 --- 
 
@@ -535,7 +536,7 @@ Pour créer une release, il faut procéder aux étapes suivantes :
 - `develop` : développement actif (unstable)
 - `(feat|chore|fix)/.*` : modification de code
 
-Les développeurs travaillent dans des sous-branches créées à partir de la branche `develop`. Les versions mineures sont gérés dans la branche `develop` et lorsqu'on livre en production : on fusionne la branche `develop` vers `main`.
+Les développeurs travaillent dans des sous-branches créées à partir de la branche `develop`. Les versions mineures sont gérées dans la branche `develop` et lorsqu'on livre en production : on fusionne la branche `develop` vers `main`.
 
 ---
 <!-- _class: lead invert -->
@@ -562,7 +563,7 @@ astuce: "utilisez 'git pull' avant de pousser à nouveau.
 astuce: Voir la 'Note à propos des avances rapides' dans 'git push --help' pour plus d'information.
 ```
 
-La raison est qu'il existe un commit sur le serveur distant que je n'ai pas récupérer en local. Je dois faire un `git pull` avant de pouvoir push mes commits.
+La raison est qu'il existe un commit sur le serveur distant que je n'ai pas récupéré en local. Je dois faire un `git pull` avant de pouvoir push mes commits.
 
 ---
 
@@ -576,7 +577,7 @@ Veuillez valider ou remiser vos modifications avant de basculer de branche.
 Abandon
 ```
 
-La raison est que j'ai des modifications non commitées sur la branche actuelle. Je dois soit les commit, soit les supprimer, soit les garder en mémoire avec un `git stash`.
+La raison est que j'ai des modifications non commitées sur la branche actuelle. Je dois soit les commits, soit les supprimer, soit les garder en mémoire avec un `git stash`.
 
 ---
 
@@ -611,6 +612,6 @@ astuce:   git config pull.ff only       # avance rapide seulement
 fatal : Besoin de spécifier comment réconcilier des branches divergentes.
 ```
 
-Ce message est dû au fonctionnement interne du `pull` *(en réalité : c'est un `fetch` puis `merge`)*. Je vous conseille de passer par l'option 2 `git config pull.rebase true` qui va fusionner les modifications distantes avec les votres.
+Ce message est dû au fonctionnement interne du `pull` *(en réalité : c'est un `fetch` puis `merge`)*. Je vous conseille de passer par l'option 2 `git config pull.rebase true` qui va fusionner les modifications distantes avec les vôtres.
 
-*`pull.ff` ne tolère pas les conflicts, et `pull.rebase false` créera des commits de fusion indésirables`*
+*`pull.ff` ne tolère pas les conflits, et `pull.rebase false` créera des commits de fusion indésirables`*
