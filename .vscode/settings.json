@@ -1,0 +1,13 @@
+{
+    "languageToolLinter.languageTool.ignoredWordsInWorkspace": [
+        "hash",
+        "ops",
+        "rebase",
+        "release",
+        "revert",
+        "sha",
+        "squasher",
+        "staging",
+        "stash"
+    ]
+}
