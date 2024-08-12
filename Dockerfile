@@ -1,4 +1,4 @@
-FROM marpteam/marp-cli:v2.5.0 as builder
+FROM marpteam/marp-cli:v3.4.0 as builder
 WORKDIR /data
 COPY . .
 RUN node /home/marp/.cli/marp-cli.js slide-deck.md --html --bespoke.progress --html true --template bespoke -o index.html
